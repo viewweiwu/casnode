@@ -18,6 +18,9 @@ export const THEME_OPTIONS = [
  * @params theme value
  */
 export const loadTheme = (theme) => {
+  if (!theme) {
+    return;
+  }
   let currTheme = THEME_OPTIONS.find((item) => item.value === theme);
 
   let before = document.querySelector("#casnodeTheme");
